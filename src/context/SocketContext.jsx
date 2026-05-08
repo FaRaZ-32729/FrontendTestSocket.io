@@ -7,7 +7,7 @@ const SocketContext = createContext();
 export const useSocket = () => useContext(SocketContext);
 
 // Use empty string if using Vite proxy, otherwise full URL
-const SOCKET_URL = VITE_BACKEND_URL;
+const SOCKET_URL = backendUrl;
 
 export const SocketProvider = ({ children }) => {
     const [socket, setSocket] = useState(null);
